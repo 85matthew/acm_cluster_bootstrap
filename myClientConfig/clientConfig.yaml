@@ -11,6 +11,7 @@ items:
     - name: oidc
       oidc:
         clientID: "123456678"
+        certificateAuthorityData: blah
         issuerURI: https://example.com/asdf
         cloudConsoleRedirectURI: https://console.cloud.google.com/kubernetes/oidc
         kubectlRedirectURI: http://localhost:10000/callback
