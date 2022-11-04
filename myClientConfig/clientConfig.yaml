@@ -9,7 +9,7 @@ items:
     clientID: 123456678
     issuerURI: https://example.com/asdf
     cloudConsoleRedirectURI: https://console.cloud.google.com/kubernetes/oidc
-    http://localhost:10000/callback
+    kubectlRedirectURI: http://localhost:10000/callback
     name: k8s
     server: https://10.128.15.243:443
 kind: List
