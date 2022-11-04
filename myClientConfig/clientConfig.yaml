@@ -13,6 +13,7 @@ items:
         issuerURI: https://example.com/asdf
         cloudConsoleRedirectURI: https://console.cloud.google.com/kubernetes/oidc
         kubectlRedirectURI: http://localhost:10000/callback
+        userClaim: mattwuser
 kind: List
 metadata:
   resourceVersion: ""
