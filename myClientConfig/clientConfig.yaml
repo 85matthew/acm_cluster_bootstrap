@@ -6,6 +6,7 @@ items:
     name: my-custom-auth
     namespace: kube-public
   spec:
+    name: cluster1
     authentication:
     - name: oidc
       oidc:
