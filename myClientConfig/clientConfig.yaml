@@ -3,13 +3,16 @@ items:
 - apiVersion: authentication.gke.io/v2alpha1
   kind: ClientConfig
   metadata:
-    name: default
+    name: my-custom-auth
     namespace: kube-public
   spec:
-    clientID: "123456678"
-    issuerURI: https://example.com/asdf
-    cloudConsoleRedirectURI: https://console.cloud.google.com/kubernetes/oidc
-    kubectlRedirectURI: http://localhost:10000/callback
-    name: k8s
-    server: https://10.128.15.243:443
+    authentication:
+    - name: oidc
+      oidc:
+        clientID: 123456678
+        issuerURI: https://example.com/asdf
+        cloudConsoleRedirectURI: https://console.cloud.google.com/kubernetes/oidc
+        kubectlRedirectURI: http://localhost:10000/callback
 kind: List
+metadata:
+  resourceVersion: ""
