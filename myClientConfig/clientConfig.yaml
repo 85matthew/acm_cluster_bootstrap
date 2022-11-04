@@ -1,21 +1,17 @@
 apiVersion: v1
-items:
-- apiVersion: authentication.gke.io/v2alpha1
-  kind: ClientConfig
-  metadata:
-    name: default
-    namespace: kube-public
-  spec:
-    name: cluster1
-    authentication:
-    - name: oidc
-      oidc:
-        clientID: "123456678"
-        certificateAuthorityData: blah
-        issuerURI: https://example.com/asdf
-        cloudConsoleRedirectURI: https://console.cloud.google.com/kubernetes/oidc
-        kubectlRedirectURI: http://localhost:10000/callback
-        userClaim: mattwuser
-kind: List
+apiVersion: authentication.gke.io/v2alpha1
+kind: ClientConfig
 metadata:
-  resourceVersion: ""
+  name: default
+  namespace: kube-public
+spec:
+  name: cluster1
+  authentication:
+  - name: oidc
+    oidc:
+      clientID: "123456678"
+      certificateAuthorityData: blah
+      issuerURI: https://example.com/asdf
+      cloudConsoleRedirectURI: https://console.cloud.google.com/kubernetes/oidc
+      kubectlRedirectURI: http://localhost:10000/callback
+      userClaim: mattwuser
