@@ -3,7 +3,7 @@ items:
 - apiVersion: authentication.gke.io/v2alpha1
   kind: ClientConfig
   metadata:
-    name: my-custom-auth
+    name: default
     namespace: kube-public
   spec:
     name: cluster1
